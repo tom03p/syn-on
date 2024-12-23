@@ -150,3 +150,5 @@
   - i18nを使った多言語対応<br>
   - 携帯画面でも見やすいように画面サイズによって表示を変えられるようにする
 
+## 画面遷移図 ##
+[SYN_on 画面遷移図](https://www.figma.com/design/ekHuLETGzhewSxh5k0eA7G/SYN_on?m=auto&t=i3Otko0OrSlN1ZJ5-6)
