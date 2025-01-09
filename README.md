@@ -152,3 +152,113 @@
 
 ## 画面遷移図 ##
 [SYN_on 画面遷移図](https://www.figma.com/design/ekHuLETGzhewSxh5k0eA7G/SYN_on?m=auto&t=i3Otko0OrSlN1ZJ5-6)
+
+## ER図 ##
+![er図](https://i.gyazo.com/6b530ebf4163dcb66a5bd6b3f5701e3d.png)
+
+<details><summary>ER図詳細</summary>
+
+### Users ###
+ユーザーのログインするための情報に関するテーブル<br>
+deviseを使うことを想定
+- email (string) → メールアドレス
+- encrypted_password (string) → 暗号化されたパスワード
+- reset_password_token (string) → deviseが作成 
+- reset_password_sent_at (datetime) → deviseが作成
+- remember_created_at (datetime) → deviseが作成
+- created_at (datetime) → 作成日時
+- updated_at (datetime) → 修正日時
+
+### Profiles ###
+ユーザーの自己紹介情報
+- user_id (integer) → Userテーブルの外部キー
+- nickname (string) → Userのニックネーム
+- birthday (date) → Userの誕生日
+- message (text) → 挨拶文を書くところ
+- photo (binary) → 自分のアイコン
+- music_genre (text) → 好きな音楽ジャンル
+- artist (text) → 好きな音楽アーティスト
+- game (text) → 好きなゲーム
+- movie (text) → 好きな映画
+- comic (text) → 好きな漫画
+
+### Followings ###
+フォローしている人を登録するテーブル
+- user_id (integer) → Userテーブルの外部キー
+
+### Musics ###
+楽曲の情報を持つテーブル
+- title (string) → 楽曲のタイトル
+- thumbnail (binary) → 楽曲のサムネイル
+- link (string) → 楽曲のリンク
+
+### Artists ###
+音楽アーティストの情報を持つテーブル
+- name (string) → アーティストの名前
+- photo (binary) → アーティストの写真
+- link (string) → アーティストのリンク
+
+### ArtistsMusics ###
+楽曲の情報を持つMusicテーブルと音楽アーティストの情報を持つArtistテーブルの中間テーブル<br>
+- music_id (integer) → Musicテーブルの外部キー
+- artist_id (integer) → Artistテーブルの外部キー
+
+### LikesMusics ###
+楽曲の情報を持つMusicテーブルとユーザーの自己紹介情報を持つProfileの中間テーブル<br>
+ユーザーの自己紹介ページで好きな音楽を載せるために作成
+- profile_id (integer) → Profileテーブルの外部キー
+- music_id (integer) → Musicテーブルの外部キー
+
+### Cards ###
+投稿情報を持つテーブル
+- title (string) → 投稿のタイトル
+- message (text) → 投稿本文
+- photo (binary) → 投稿写真
+- mind_x (integer) → 今の気分イメージを表すmindグラフのx軸の値
+- mind_y (integer) → 今の気分イメージを表すmindグラフのy軸の値
+- image_x (integer) → 楽曲イメージを表すimageグラフのx軸の値
+- image_y (integer) → 楽曲イメージを表すimageグラフのy軸の値
+- coments_counter (integer) → コメントを数えるカウンター
+- likes_counter (integer) → いいねを数えるカウンター
+
+### Comments ###
+コメント情報を持つテーブル
+- user_id (integer) → Userテーブルの外部キー
+- comment (text) → コメント内容
+
+### Likes ###
+投稿に付けるいいね情報を持つテーブル
+- user_id (integer) → Userテーブルの外部キー
+
+### LikesComments ###
+コメントに付けるいいね情報を持つテーブル
+- user_id (integer) → Userテーブルの外部キー
+
+### MusicTags ###
+投稿の楽曲に付けるタグ情報を持つテーブル
+- tag (string) → タグ情報
+
+### MusicTaggings ###
+投稿情報を持つCardテーブルと楽曲に付けるタグを持つMusicTagテーブルの中間テーブル<br>
+タグ付けのために作成
+- card_id (integer) → Cardテーブルの外部キー
+- musictag_id (integer) → Musictagテーブルの外部キー
+
+### MindTags ###
+投稿の気分に付けるタグ情報を持つテーブル
+- tag (string) → タグ情報
+
+### MindTaggings ###
+投稿情報を持つCardテーブルと気分に付けるタグを持つMindTagテーブルの中間テーブル<br>
+タグ付けのために作成
+- card_id (integer) → Cardテーブルの外部キー
+- mindtag_id (integer) → Mindtagテーブルの外部キー
+
+### CardsMusics ###
+投稿情報を持つCardテーブルと楽曲の情報を持つMusicテーブルの中間テーブル<br>
+投稿に楽曲情報を載せるために作成
+- card_id (integer) → Cardテーブルの外部キー
+- music_id (integer) → Musicテーブルの外部キー
+
+</details>
+
