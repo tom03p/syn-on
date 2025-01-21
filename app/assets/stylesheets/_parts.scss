@@ -1,0 +1,9 @@
+
+@mixin main_font_inconsolata($weight, $width) {
+  font-family: "Inconsolata", serif;
+  font-optical-sizing: auto;
+  font-weight: $weight;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" $width;
+}

@@ -1,0 +1,13 @@
+@use 'variable';
+@use 'parts';
+
+.footer {
+  background-color: variable.$basecolor_dark;
+}
+
+.footer_title {
+  
+  @include parts.main_font_inconsolata(200,200);
+  color: variable.$accentcolor_white;
+  font-size: 10px;
+}
