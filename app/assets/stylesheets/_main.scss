@@ -1,0 +1,14 @@
+@use 'variable';
+@use 'parts';
+
+.body {
+  background-color: variable.$basecolor;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.heading {
+  @include parts.main_font_inconsolata(900,150);
+  color: variable.$accentcolor_green;
+}

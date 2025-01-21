@@ -1,0 +1,11 @@
+@use 'variable';
+@use 'parts';
+
+.header {
+  background-color: variable.$basecolor_lite;
+}
+
+.main_title {
+  @include parts.main_font_inconsolata(900,200);
+  color: variable.$accentcolor_green;
+}
