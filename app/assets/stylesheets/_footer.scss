@@ -1,13 +1,14 @@
-@use 'variable';
+@use 'palette';
 @use 'parts';
+@use 'font';
 
 .footer {
-  background-color: variable.$basecolor_dark;
+  background-color: palette.$basecolor_dark;
 }
 
 .footer_title {
   
-  @include parts.main_font_inconsolata(200,200);
-  color: variable.$accentcolor_white;
+  @include font.main_font_inconsolata(200,200);
+  color: palette.$accentcolor_white;
   font-size: 10px;
 }

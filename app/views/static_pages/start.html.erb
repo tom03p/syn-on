@@ -1,6 +1,11 @@
-<div class='body'>
-  <div class='heading'>
-    <h2>Welcome!!</h2>
-  </div>
-  <p>ここは日常に音楽を添えて投稿できる音楽共有コミュニティです</p>
+<div class='ground'>
+  
+  <h2 class='heading'>Welcome!!</h2>
+  <p>ここは日常に音楽を添えて投稿できる音楽共有コミュニティです。</p>
+  
+  <span>
+    <%= link_to 'タイムラインを覗いてみる', cards_path, class:'btn-green' %></br>
+    <%= link_to 'ログイン', user_session_path, class:'btn-gray' %>
+    <%= link_to '新規登録', new_user_registration_path, class:'btn-gray' %>
+  </span>
 </div>
