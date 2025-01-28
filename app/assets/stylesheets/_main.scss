@@ -1,14 +1,14 @@
-@use 'variable';
+@use 'palette';
 @use 'parts';
+@use 'font';
 
-.body {
-  background-color: variable.$basecolor;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.ground {
+  background-color: palette.$basecolor;
 }
 
 .heading {
-  @include parts.main_font_inconsolata(900,150);
-  color: variable.$accentcolor_green;
+  @include font.main_font_inconsolata(900,150);
+  color: palette.$accentcolor_green;
+  font-size: 40px;
 }
+

@@ -1,0 +1,13 @@
+@use 'palette';
+@use 'parts';
+@use 'font';
+
+.notice {
+  position: relative;
+  z-index: 5;
+}
+
+.alert {
+  position: relative;
+  z-index: 5;
+}

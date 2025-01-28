@@ -1,0 +1,21 @@
+
+@mixin main_font_inconsolata($weight, $width) {
+  font-family: "Inconsolata", serif;
+  font-optical-sizing: auto;
+  font-weight: $weight;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" $width;
+}
+
+@mixin zen-kaku-gothic-new-regular($weight) {
+  font-family: "Zen Kaku Gothic New", serif;
+  font-weight: $weight;
+  font-style: normal;
+}
+
+@mixin zen-maru-gothic-regular($weight) {
+  font-family: "Zen Maru Gothic", serif;
+  font-weight: $weight;
+  font-style: normal;
+}

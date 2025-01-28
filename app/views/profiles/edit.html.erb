@@ -1,0 +1,8 @@
+<div>
+  <h1 class='heading'>Profile</h1>
+  <%= form_with model: @profile, url: profile_path, method: :put do |f| %>
+    <%= f.label :nickname, class: 'title' %>
+    <%= f.text_field :nickname %>
+    <%= f.submit class: 'btn-green' %>
+  <% end %>
+</div>
