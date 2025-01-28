@@ -12,6 +12,6 @@ class User < ApplicationRecord
   private
 
   def create_profile
-    Profile.create(user: self, message:'このユーザーは新規登録したばかりです。')
+    Profile.create(user: self, message: "このユーザーは新規登録したばかりです。")
   end
 end

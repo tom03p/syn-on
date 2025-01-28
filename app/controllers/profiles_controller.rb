@@ -10,9 +10,9 @@ class ProfilesController < ApplicationController
   def update
     @profile = current_user.profile
     if @profile.update(profile_params)
-      redirect_to profile_path, notice: '保存されました' 
+      redirect_to profile_path, notice: "保存されました"
     else
-      flash.now[:danger] = '保存できませんでした'
+      flash.now[:danger] = "保存できませんでした"
       render :edit, status: :unprocessable_entity
     end
   end
