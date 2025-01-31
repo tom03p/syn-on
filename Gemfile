@@ -60,4 +60,8 @@ group :test do
   gem "selenium-webdriver"
 end
 
+group :production do
+  gem "mailjet"
+end
+
 gem "devise", "~> 4.9"
