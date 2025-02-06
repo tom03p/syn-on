@@ -1,0 +1,24 @@
+<div class='container'>
+  <h1 class='heading'>New Card</h1>
+  <div>
+    <%= form_with model: @card do |f| %>
+      <div>
+        <%= f.label :title, class: 'title' %>
+        <%= f.text_field :title %>
+      </div>
+      <div>
+        <%= f.label :text, class: 'title' %>
+        <%= f.text_area :message %>
+      </div>
+        <%= field_set_tag 'music', class: 'music' do %>
+          <%= fields_for :music, @music do |mf| %>
+            <div>
+              <%= mf.label :link, class: 'title' %>
+              <%= mf.url_field :link %>
+            </div>
+          <% end %>
+        <% end %>
+      <%= f.submit class: 'btn-green' %>
+    <% end %>
+  </div>
+</div>

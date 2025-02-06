@@ -1,0 +1,13 @@
+<div>
+  <div>
+    <h3><%= card.title %></h3>
+    <p><%= card.user.profile.nickname %></p>
+  </div>
+  <div>
+    <p><%= card.message %></p>
+  </div>
+  <div>
+    <p>聴いてみる？</p>
+    <%= link_to card.musics.first.link, card.musics.first.link %>
+  </div>
+  </div>
