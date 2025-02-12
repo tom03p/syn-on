@@ -28,6 +28,12 @@ class CardsController < ApplicationController
     end
   end
 
+  def destroy
+    card = current_user.cards.find(params[:id])
+    card.destroy!
+    redirect_to cards_path, notice: "削除されました", status: :see_other
+  end
+
   private
 
   def card_params

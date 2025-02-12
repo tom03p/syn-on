@@ -12,3 +12,56 @@
   font-size: 40px;
 }
 
+/* ケバブメニュー全体 */
+.kebab-menu {
+  position: relative;
+}
+
+/* メニューボタン（☰） */
+.menu-btn {
+  background: #333;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* メニューコンテンツ（最初は非表示） */
+.menu-content {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  min-width: 150px;
+  overflow: hidden;
+}
+
+/* リンク通常時 */
+.menu-content a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+/* リンクにマウスが乗ったとき */
+.menu-content a:hover {
+  background: #f0f0f0;
+}
+
+/* JavaScriptで開閉する用のクラス */
+.menu-content.active {
+  display: block;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* フェードインアニメーション */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
