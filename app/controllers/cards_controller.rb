@@ -2,7 +2,7 @@ class CardsController < ApplicationController
   before_action :authenticate_user!, except: [ :index ]
 
   def index
-    @cards = Card.includes(cards_musics: :music, user: :profile)
+    @cards = Card.includes(cards_musics: :music, user: :profile).order(created_at: :DESC)
   end
 
   def new

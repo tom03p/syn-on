@@ -12,16 +12,23 @@
   font-size: 40px;
 }
 
+.menu {
+  display: inline-block;
+  position: relative;
+}
+
 /* ケバブメニュー全体 */
 .kebab-menu {
-  position: relative;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 /* メニューボタン（☰） */
 .menu-btn {
-  background: #333;
-  color: white;
-  border: none;
+  background: palette.$basecolor_lite;
+  color: palette.$basicfont;
+  border: 1px solid palette.$basicfont;
   padding: 5px 10px;
   font-size: 15px;
   cursor: pointer;
@@ -34,10 +41,10 @@
   position: absolute;
   top: 40px;
   left: 0;
-  background: white;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background: palette.$basecolor_lite;
+  box-shadow: 0 4px 6px palette.$shadow;
   border-radius: 5px;
-  min-width: 150px;
+  min-width: 100px;
   overflow: hidden;
 }
 
@@ -46,12 +53,12 @@
   display: block;
   padding: 10px;
   text-decoration: none;
-  color: black;
+  color: palette.$basicfont;
 }
 
 /* リンクにマウスが乗ったとき */
 .menu-content a:hover {
-  background: #f0f0f0;
+  color: palette.$accentcolor_green;
 }
 
 /* JavaScriptで開閉する用のクラス */
