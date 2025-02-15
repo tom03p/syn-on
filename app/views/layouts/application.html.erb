@@ -38,9 +38,8 @@
       <%= render 'shared/before_login_header' %>
     <% end %>
 
-    <!-- devise -->
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <!-- flash -->
+    <%= render 'shared/flash_message' %>
 
     <%= yield %>
     <%= render 'shared/footer' %>

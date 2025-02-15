@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     root to: "static_pages#start"
   end
   devise_for :users
-  resources :cards, only: %i[index new create edit update delete]
+  resources :cards, only: %i[index new create destroy]
   resource :profile, only: %i[show edit update]
   mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
 end

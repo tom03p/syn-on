@@ -9,6 +9,10 @@ class User < ApplicationRecord
   has_one :profile, dependent: :destroy
   after_create :create_profile
 
+  def own?(object)
+    id == object&.user_id
+  end
+
   private
 
   def create_profile

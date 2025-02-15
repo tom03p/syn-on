@@ -1,0 +1,22 @@
+@use 'palette';
+@use 'parts';
+@use 'font';
+@use 'icon';
+
+.card {
+  padding: 1em;
+  width: 95%;
+  background-color: palette.$basecolor_lite;
+  box-shadow: 2px 3px 3px palette.$shadow;
+  display: flex;
+}
+
+.card-title {
+  display: inline-block;
+  @include font.zen-kaku-gothic-new-regular(400)
+}
+
+.nickname {
+  display: inline-block;
+  right: 0;
+}

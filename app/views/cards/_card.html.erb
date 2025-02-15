@@ -1,7 +1,17 @@
-<div>
+<div class='card'>
+  <% if user_signed_in? && current_user.own?(card) %>
+    <div class="menu">
+      <div class="kebab-menu">
+        <button class="menu-btn">☰</button>
+        <div class="menu-content">
+          <%= link_to '削除', card_path(card), id: "card-delete-#{card.id}", data: { turbo_method: :delete, turbo_confirm: "本当に削除しますか？" } %>
+        </div>
+      </div>
+    </div>
+  <% end %> 
   <div>
-    <h3><%= card.title %></h3>
-    <p><%= card.user.profile.nickname %></p>
+    <h3 class='card-title'><%= card.title %></h3>
+    <p class='nickname'><%= card.user.profile.nickname %></p>
   </div>
   <div>
     <p><%= card.message %></p>
@@ -10,4 +20,4 @@
     <p>聴いてみる？</p>
     <%= link_to card.musics.first.link, card.musics.first.link %>
   </div>
-  </div>
+</div>

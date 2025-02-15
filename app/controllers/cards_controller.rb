@@ -2,7 +2,7 @@ class CardsController < ApplicationController
   before_action :authenticate_user!, except: [ :index ]
 
   def index
-    @cards = Card.includes(cards_musics: :music, user: :profile)
+    @cards = Card.includes(cards_musics: :music, user: :profile).order(created_at: :DESC)
   end
 
   def new
@@ -23,9 +23,19 @@ class CardsController < ApplicationController
       end
 
     rescue ActiveRecord::RecordInvalid => e
-      flash.now[:alert] = "投稿に失敗しました: #{e.message}"
+      @music = Music.new(music_params)
+      if e.record.is_a?(Music)
+        @music.errors.merge!(e.record.errors)
+      end
+      flash.now[:alert] = "投稿に失敗しました"
       render :new, status: :unprocessable_entity
     end
+  end
+
+  def destroy
+    card = current_user.cards.find(params[:id])
+    card.destroy!
+    redirect_to cards_path, notice: "削除されました", status: :see_other
   end
 
   private

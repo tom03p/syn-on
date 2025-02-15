@@ -2,13 +2,150 @@
 @use 'parts';
 @use 'font';
 
+.notice {
+  position: relative;
+  z-index: 5;
+  padding: 1%;
+  margin: 0%;
+  color: palette.$accentcolor_white;
+  background-color: palette.$accentcolor_green;
+  @include font.zen-kaku-gothic-new-regular(400);
+  border-radius: 0px;
+}
+
+.alert {
+  position: relative;
+  z-index: 5;
+  padding: 1%;
+  margin: 0%;
+  color: palette.$accentcolor_white;
+  background-color: palette.$accentcolor_red;
+  @include font.zen-kaku-gothic-new-regular(400);
+  border-radius: 0px;
+}
+
+.error {
+  min-width: 400px;
+  padding: 3%;
+  margin: 2%;
+  color: palette.$accentcolor_white;
+  background-color: palette.$accentcolor_red;
+  @include font.zen-kaku-gothic-new-regular(400);
+  border-radius: 5px;
+}
+
 .ground {
   background-color: palette.$basecolor;
+  padding: 5%;
+}
+
+.desk {
+  position: relative;
+  padding: 1em;
+  box-sizing: border-box;
+  width: 95%;
+  display: grid;
+  margin: 0 auto;
+  .cloth {
+    background-color: palette.$basecolor_lite;
+    box-shadow: 2px 3px 3px palette.$shadow;
+  }
+}
+
+.cloth-desk {
+  position: relative;
+  padding: 1em;
+  box-sizing: border-box;
+  width: 95%;
+  display: grid;
+  margin: 0 auto;
+  background-color: palette.$basecolor_lite;
+  box-shadow: 2px 3px 3px palette.$shadow;
+}
+
+.center {
+  margin: 0 auto;
+  display: block;
 }
 
 .heading {
   @include font.main_font_inconsolata(900,150);
   color: palette.$accentcolor_green;
   font-size: 40px;
+  text-align: center;
 }
 
+.sub-model {
+  & legend{
+  @include font.main_font_inconsolata(900,150);
+  color: palette.$accentcolor_green;
+  font-size: 30px;
+  text-align: center;
+}}
+
+.attention{
+  font-size: large;
+  @include font.zen-kaku-gothic-new-regular(400);
+  text-align: center;
+}
+
+.menu {
+  display: inline-block;
+  position: relative;
+}
+
+/* ケバブメニュー全体 */
+.kebab-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* メニューボタン（☰） */
+.menu-btn {
+  background: palette.$basecolor_lite;
+  color: palette.$basicfont;
+  border: 1px solid palette.$basicfont;
+  padding: 5px 10px;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* メニューコンテンツ（最初は非表示） */
+.menu-content {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background: palette.$basecolor_lite;
+  box-shadow: 0 4px 6px palette.$shadow;
+  border-radius: 5px;
+  min-width: 100px;
+  overflow: hidden;
+}
+
+/* リンク通常時 */
+.menu-content a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: palette.$basicfont;
+}
+
+/* リンクにマウスが乗ったとき */
+.menu-content a:hover {
+  color: palette.$accentcolor_green;
+}
+
+/* JavaScriptで開閉する用のクラス */
+.menu-content.active {
+  display: block;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* フェードインアニメーション */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

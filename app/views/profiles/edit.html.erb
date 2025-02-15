@@ -1,8 +1,19 @@
-<div>
-  <h1 class='heading'>Profile</h1>
-  <%= form_with model: @profile, url: profile_path, method: :put do |f| %>
-    <%= f.label :nickname, class: 'title' %>
-    <%= f.text_field :nickname %>
-    <%= f.submit class: 'btn-green' %>
-  <% end %>
+<div class="ground">
+  <div class="cloth-desk">
+    <h1 class="heading">Profile</h1>
+    <div class="center">
+      <%= render "shared/error_messages", object: @profile %>
+    </div>
+    <div class="center">
+      <%= form_with model: @profile, url: profile_path, method: :put do |f| %>
+        <div class="field">
+          <%= f.label :nickname, class: "title" %><br />
+          <%= f.text_field :nickname, class: "text-field" %>
+        </div>
+        <div class="actions">
+          <%= f.submit class: "btn-green" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
 </div>
