@@ -23,7 +23,11 @@ class CardsController < ApplicationController
       end
 
     rescue ActiveRecord::RecordInvalid => e
-      flash.now[:alert] = "投稿に失敗しました: #{e.message}"
+      @music = Music.new(music_params)
+      if e.record.is_a?(Music)
+        @music.errors.merge!(e.record.errors)
+      end
+      flash.now[:alert] = "投稿に失敗しました"
       render :new, status: :unprocessable_entity
     end
   end

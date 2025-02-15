@@ -1,5 +1,6 @@
 
 @mixin btn($x,$y,$radius) {
+  display: inline-block;
   padding: $x $y;
   border-radius: $radius;
 }

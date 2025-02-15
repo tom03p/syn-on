@@ -1,8 +1,13 @@
-<div>
-  <h1 class='heading'>Profile</h1>
-  <table class='table'>
-    <tr><%= image_tag 'GONBE.png', size: '80*80', class: 'profile-photo' %></tr>
-    <tr><%= @profile.nickname %></tr>
-    <tr><%= link_to '編集', edit_profile_path, class: 'btn-green' %></tr>
-  </table>
+<div class="ground">
+  <div class="cloth-desk">
+    <div class="center">
+      <h1 class="heading">Profile</h1>
+    </div>
+    <div class="center">
+      <p>ニックネーム :  <%= @profile.nickname %></p>
+    </div>
+    <div class="center">
+      <%= link_to '編集', edit_profile_path, class: "btn-green" %>
+    </div>
+  </div>
 </div>

@@ -25,7 +25,9 @@ p{
   @include parts.btn(5px,15px,30px);
   background-color: palette.$accentcolor_gray;
   color: palette.$accentcolor_white;
+  
   margin: 5px;
+  border: none;
 }
 
 .btn-green {
@@ -33,4 +35,5 @@ p{
   background-color: palette.$accentcolor_green;
   color: palette.$accentcolor_white;
   margin: 5px;
+  border: none;
 }

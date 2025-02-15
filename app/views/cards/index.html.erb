@@ -1,12 +1,12 @@
 <div class='ground'>
-
-  <div class='container'>
-    <% if @cards.present? %>
-      <%= render @cards %>
-    <% else %>
-      <div class='heading'>Oops</div>
-      <p>カードはまだ無いみたい。
-    <% end %>
-  </div>
-
+  <% if @cards.present? %>
+    <%= render @cards %>
+  <% else %>
+    <div class='cloth-desk'>
+      <div class='center'>  
+        <div class='heading'>Oops</div>
+        <p>カードはまだ無いみたい。
+      </div>
+    </div>
+  <% end %>
 </div>

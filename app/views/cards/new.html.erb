@@ -1,24 +1,32 @@
-<div class='container'>
-  <h1 class='heading'>New Card</h1>
-  <div>
-    <%= form_with model: @card do |f| %>
-      <div>
-        <%= f.label :title, class: 'title' %>
-        <%= f.text_field :title %>
-      </div>
-      <div>
-        <%= f.label :text, class: 'title' %>
-        <%= f.text_area :message %>
-      </div>
-        <%= field_set_tag 'music', class: 'music' do %>
-          <%= fields_for :music, @music do |mf| %>
-            <div>
-              <%= mf.label :link, class: 'title' %>
-              <%= mf.url_field :link %>
-            </div>
+<div class="ground">
+  <div class="cloth-desk">
+    <h1 class="heading">New Card</h1>
+    <div class="center">
+      <%= render "shared/error_messages", object: @card %>
+      <%= render "shared/error_messages", object: @music %>
+    </div>
+    <div class="center">
+      <%= form_with model: @card do |f| %>
+        <div class="field">
+          <%= f.label :title, class: "title" %><br />
+          <%= f.text_field :title, class: "text-field" %>
+        </div>
+        <div class="field">
+          <%= f.label :text, class: "title" %><br />
+          <%= f.text_area :message, class: "text-field" %>
+        </div>
+          <%= field_set_tag 'music', class: "sub-model" do %>
+            <%= fields_for :music, @music do |mf| %>
+              <div class="field">
+                <%= mf.label :link, class: "title" %><br />
+                <%= mf.url_field :link, class: "text-field" %>
+              </div>
+            <% end %>
           <% end %>
-        <% end %>
-      <%= f.submit class: 'btn-green' %>
-    <% end %>
+        <div class="actions">
+          <%= f.submit class: "btn-green" %>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>

@@ -2,12 +2,19 @@
 @use 'parts';
 @use 'font';
 
-.notice {
-  position: relative;
-  z-index: 5;
+.field {
+  color: palette.$basicfont;
+  @include font.zen-kaku-gothic-new-regular(400);
+  padding: 1%;
 }
 
-.alert {
-  position: relative;
-  z-index: 5;
+.text-field {
+  border-radius: 5px;
+  padding: 3%;
+  border: 1px solid palette.$basicfont;
+  min-width: 300px;
+}
+
+.actions {
+  text-align: center;
 }

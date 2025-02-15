@@ -2,14 +2,91 @@
 @use 'parts';
 @use 'font';
 
+.notice {
+  position: relative;
+  z-index: 5;
+  padding: 1%;
+  margin: 0%;
+  color: palette.$accentcolor_white;
+  background-color: palette.$accentcolor_green;
+  @include font.zen-kaku-gothic-new-regular(400);
+  border-radius: 0px;
+}
+
+.alert {
+  position: relative;
+  z-index: 5;
+  padding: 1%;
+  margin: 0%;
+  color: palette.$accentcolor_white;
+  background-color: palette.$accentcolor_red;
+  @include font.zen-kaku-gothic-new-regular(400);
+  border-radius: 0px;
+}
+
+.error {
+  min-width: 400px;
+  padding: 3%;
+  margin: 2%;
+  color: palette.$accentcolor_white;
+  background-color: palette.$accentcolor_red;
+  @include font.zen-kaku-gothic-new-regular(400);
+  border-radius: 5px;
+}
+
 .ground {
   background-color: palette.$basecolor;
+  padding: 5%;
+}
+
+.desk {
+  position: relative;
+  padding: 1em;
+  box-sizing: border-box;
+  width: 95%;
+  display: grid;
+  margin: 0 auto;
+  .cloth {
+    background-color: palette.$basecolor_lite;
+    box-shadow: 2px 3px 3px palette.$shadow;
+  }
+}
+
+.cloth-desk {
+  position: relative;
+  padding: 1em;
+  box-sizing: border-box;
+  width: 95%;
+  display: grid;
+  margin: 0 auto;
+  background-color: palette.$basecolor_lite;
+  box-shadow: 2px 3px 3px palette.$shadow;
+}
+
+.center {
+  margin: 0 auto;
+  display: block;
 }
 
 .heading {
   @include font.main_font_inconsolata(900,150);
   color: palette.$accentcolor_green;
   font-size: 40px;
+  text-align: center;
+}
+
+.sub-model {
+  & legend{
+  @include font.main_font_inconsolata(900,150);
+  color: palette.$accentcolor_green;
+  font-size: 30px;
+  text-align: center;
+}}
+
+.attention{
+  font-size: large;
+  @include font.zen-kaku-gothic-new-regular(400);
+  text-align: center;
 }
 
 .menu {
