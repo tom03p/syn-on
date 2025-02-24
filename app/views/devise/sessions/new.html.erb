@@ -1,7 +1,7 @@
 <div class='ground'>
   <div class='cloth-desk'>
     <div class='center'>
-      <h2 class='heading'>Log in</h2>
+      <h2 class='heading'><%= t('.title') %></h2>
     </div>
     <div class='center'>
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -23,7 +23,7 @@
         <% end %>
 
         <div class="actions">
-          <%= f.submit "Log in", class: 'btn-green' %>
+          <%= f.submit t('helpers.submit.sign_in'), class: 'btn-green' %>
         </div>
       <% end %>
     </div>

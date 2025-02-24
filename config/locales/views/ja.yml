@@ -1,0 +1,39 @@
+ja:
+  helpers:
+    submit:
+      create: 登録
+      submit: 保存
+      update: 更新
+      sign_in: サインイン
+    edit: 編集
+    delete: 削除
+    label:
+      email: メールアドレス
+      password: パスワード
+  header:
+    sign_up: 新規登録
+    sign_in: サインイン
+    sign_out: サインアウト
+    profile: プロフィール
+    card_index: 全ての投稿
+    new_card: 新規投稿
+  static_pages:
+    start:
+      title: Welcome!!
+      greeting_message: ここは日常に音楽を添えて投稿できる音楽共有コミュニティです
+      timeline_introduction: タイムラインを覗いてみる
+      sign_in: サインイン
+      sign_up: 新規登録
+  cards:
+    new:
+      title: New Card
+      sub_title: music
+  profiles:
+    show:
+      title: Profile
+      nickname: ニックネーム
+    edit:
+      title: Profile
+
+
+  

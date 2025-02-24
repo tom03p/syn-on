@@ -1,6 +1,6 @@
 <div class="ground">
   <div class="cloth-desk">
-    <h1 class="heading">New Card</h1>
+    <h1 class="heading"><%= t('.title') %></h1>
     <div class="center">
       <%= render "shared/error_messages", object: @card %>
       <%= render "shared/error_messages", object: @music %>
@@ -15,7 +15,7 @@
           <%= f.label :text, class: "title" %><br />
           <%= f.text_area :message, class: "text-field" %>
         </div>
-          <%= field_set_tag 'music', class: "sub-model" do %>
+          <%= field_set_tag t('.sub_title'), class: "sub-model" do %>
             <%= fields_for :music, @music do |mf| %>
               <div class="field">
                 <%= mf.label :link, class: "title" %><br />

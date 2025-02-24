@@ -4,8 +4,8 @@
     <input type='checkbox' class='menu-btn' id='menu-btn'>
     <label for='menu-btn' class='menu-icon'><span class='navicon'></span></label>
     <ul class='menu'>
-      <li><%= link_to 'ログイン', user_session_path %></li>
-      <li><%= link_to '新規登録', new_user_registration_path %></li>
+      <li><%= link_to t('header.sign_in'), user_session_path %></li>
+      <li><%= link_to t('header.sign_up'), new_user_registration_path %></li>
     </ul>
   </span>
 </header>

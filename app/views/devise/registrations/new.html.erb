@@ -1,7 +1,7 @@
 <div class='ground'>
   <div class='cloth-desk'>
     <div class='center'>
-      <h2 class='heading'>Sign up</h2>
+      <h2 class='heading'><%= t('.title') %></h2>
     </div>
     <div class='center'>
       <%= render "devise/shared/error_messages", resource: resource %>
@@ -17,7 +17,7 @@
         <div class="field">
           <%= f.label :password %>
           <% if @minimum_password_length %>
-          <em>(<%= @minimum_password_length %> characters minimum)</em>
+          <span>(<%= @minimum_password_length %><%= t('.characters_minimum') %>)</span>
           <% end %><br />
           <%= f.password_field :password, autocomplete: "new-password", class:"text-field" %>
         </div>
@@ -28,7 +28,7 @@
         </div>
 
         <div class="actions">
-          <%= f.submit "Sign up", class:'btn-green' %>
+          <%= f.submit t('helpers.submit.create'), class:'btn-green' %>
         </div>
       <% end %>
     </div>

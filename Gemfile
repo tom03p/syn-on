@@ -64,4 +64,7 @@ group :production do
   gem "mailjet"
 end
 
+# User認証系
 gem "devise", "~> 4.9"
+# i18n
+gem 'rails-i18n', '~> 7.0.0'
