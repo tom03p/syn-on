@@ -15,6 +15,6 @@ ja:
         nickname: ニックネーム
       card:
         title: タイトル
-        text: 本文
+        message: 本文
       music:
         link: リンク
