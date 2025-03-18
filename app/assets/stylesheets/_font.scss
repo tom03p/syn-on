@@ -1,11 +1,20 @@
 
-@mixin main_font_inconsolata($weight, $width) {
+@mixin main-font-inconsolata($weight, $width) {
   font-family: "Inconsolata", serif;
   font-optical-sizing: auto;
   font-weight: $weight;
   font-style: normal;
   font-variation-settings:
     "wdth" $width;
+}
+
+// $weight: Use a value from 100 to 900
+
+@mixin submain-noto-sans-jp($weight) {
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: $weight;
+  font-style: normal;
 }
 
 @mixin zen-kaku-gothic-new-regular($weight) {
@@ -19,3 +28,4 @@
   font-weight: $weight;
   font-style: normal;
 }
+
