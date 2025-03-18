@@ -5,6 +5,7 @@
 @forward 'card';
 @forward 'devise';
 @forward 'side_menu';
+@forward 'mailer';
 
 @use 'palette';
 @use 'parts';
@@ -14,11 +15,24 @@
 
 a{
   text-decoration: none;
+  color: palette.$basicfont;
+  @include font.submain-noto-sans-jp(400);
+  transition: 0.2s;
 }
 
 p{
   color: palette.$basicfont;
-  @include font.zen-kaku-gothic-new-regular(400)
+  @include font.submain-noto-sans-jp(400)
+}
+
+.link-bar {
+  color: palette.$basicfont;
+  @include font.submain-noto-sans-jp(400);
+  transition: 0.2s;
+}
+
+.link-bar:hover {
+  color: palette.$accentcolor_green;
 }
 
 .btn-gray {

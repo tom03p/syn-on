@@ -77,7 +77,7 @@ Rails.application.configure do
   # Disable caching for Action Mailer templates even if Action Controller
   # caching is enabled.
   config.action_mailer.perform_caching = false
-  # config.action_mailer.delivery_method = :mailjet_api
+  config.action_mailer.delivery_method = :mailjet
   config.action_mailer.default_url_options = { host: "syn-on-app-8c55e5f9481e.herokuapp.com", protocol: "https" }
 
   # Ignore bad email addresses and do not raise email delivery errors.

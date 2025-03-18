@@ -13,7 +13,7 @@
 
 .footer_title {
   text-align: center;
-  @include font.main_font_inconsolata(200,200);
+  @include font.main-font-inconsolata(200,200);
   color: palette.$accentcolor_white;
   font-size: 15px;
 }

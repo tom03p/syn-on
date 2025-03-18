@@ -6,6 +6,9 @@ ja:
       confirmed: "メールアドレスを確認しました。"
       send_instructions: "数分以内にメールアドレス確認用のメールが届きます。"
       send_paranoid_instructions: "メールアドレスが登録されている場合、数分以内にメールアドレス確認用のメールが届きます。"
+      new:
+        title: Resend email
+        message: 下記メールアドレスにサインインに必要なリンクを送付致します。
     failure:
       already_authenticated: "あなたは既にサインインしています。"
       inactive: "あなたのアカウントはまだ有効になっていないようです。"
@@ -18,7 +21,10 @@ ja:
       unconfirmed: "この操作を続ける前にメールアドレスを確認してください。"
     mailer:
       confirmation_instructions:
-        subject: "確認手順"
+        subject: メールアドレスの登録確認完了
+        greeting: "ようこそ %{email} さん"
+        message: "以下のリンクからサインインページに進んでください。"
+        sign_in_link: "サインイン"
       reset_password_instructions:
         subject: "パスワードのリセット手順"
       unlock_instructions:
@@ -60,7 +66,7 @@ ja:
       unlocked: "アカウントロックが解除されました。引き続き使用するにはサインインが必要です。"
   errors:
     messages:
-      already_confirmed: "既に確認されています。サインインしてみてください。"
+      already_confirmed: "は既に確認されています。そのままサインインしてください。"
       confirmation_period_expired: "%{period}以内に確認する必要があります。新しいものをリクエストしてください。"
       expired: "有効期限が切れています。新しいものをリクエストしてください。"
       not_found: "見つかりません"
@@ -68,3 +74,6 @@ ja:
       not_saved:
         one: "1つのエラーによってこの%{resource}は保存出来ませんでした。"
         other: "%{count}個のエラーによってこの%{resource}は保存出来ませんでした。"
+  links:
+    messages:
+      not_receive_confirmation?: 確認メールが来ない場合はこちら
