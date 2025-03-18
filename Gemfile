@@ -35,7 +35,7 @@ gem "tzinfo-data", platforms: %i[ windows jruby ]
 gem "bootsnap", require: false
 
 # 環境変数を.envからENVにロード
-gem 'dotenv', groups: [:development, :test]
+gem "dotenv", groups: [ :development, :test ]
 
 # User認証系
 gem "devise", "~> 4.9"
@@ -82,7 +82,4 @@ group :test do
   gem "webdrivers"
 end
 
-group :production do
- 
-end
-
+group :production do end
