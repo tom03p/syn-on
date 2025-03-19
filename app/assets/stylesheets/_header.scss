@@ -12,7 +12,7 @@
 }
 
 .main_title {
-  @include font.main_font_inconsolata(900,200);
+  @include font.main-font-inconsolata(900,200);
   color: palette.$accentcolor_green;
   font-size: 50px;
 }

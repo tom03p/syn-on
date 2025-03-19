@@ -1,17 +1,17 @@
 <div class='ground'>
   <div class='cloth-desk'>
     <div class='center'>
-      <h2 class='heading'>Welcome!!</h2>
+      <h2 class='heading'><%= t('.title') %></h2>
     </div>
     <div class='center'>
-      <p>ここは日常に音楽を添えて投稿できる音楽共有コミュニティです</p>
+      <p><%= t('.greeting_message') %></p>
     </div>
     <div class='center'>
-      <%= link_to 'タイムラインを覗いてみる', cards_path, class:'btn-green' %>
+      <%= link_to t('.timeline_introduction'), cards_path, class:'btn-green' %>
     </div>
     <div class='center'>
-      <%= link_to 'ログイン', user_session_path, class:'btn-gray' %>
-      <%= link_to '新規登録', new_user_registration_path, class:'btn-gray' %>
+      <%= link_to t('.sign_in'), user_session_path, class:'btn-gray' %>
+      <%= link_to t('.sign_up'), new_user_registration_path, class:'btn-gray' %>
     </div>
   </div>
 </div>

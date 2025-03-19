@@ -4,7 +4,7 @@
       <div class="kebab-menu">
         <button class="menu-btn">☰</button>
         <div class="menu-content">
-          <%= link_to '削除', card_path(card), id: "card-delete-#{card.id}", data: { turbo_method: :delete, turbo_confirm: "本当に削除しますか？" } %>
+          <%= link_to t('helpers.delete'), card_path(card), id: "card-delete-#{card.id}", data: { turbo_method: :delete, turbo_confirm: "本当に削除しますか？" } %>
         </div>
       </div>
     </div>

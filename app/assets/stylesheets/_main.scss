@@ -9,7 +9,7 @@
   margin: 0%;
   color: palette.$accentcolor_white;
   background-color: palette.$accentcolor_green;
-  @include font.zen-kaku-gothic-new-regular(400);
+  @include font.submain-noto-sans-jp(400);
   border-radius: 0px;
 }
 
@@ -20,7 +20,7 @@
   margin: 0%;
   color: palette.$accentcolor_white;
   background-color: palette.$accentcolor_red;
-  @include font.zen-kaku-gothic-new-regular(400);
+  @include font.submain-noto-sans-jp(400);
   border-radius: 0px;
 }
 
@@ -30,11 +30,12 @@
   margin: 2%;
   color: palette.$accentcolor_white;
   background-color: palette.$accentcolor_red;
-  @include font.zen-kaku-gothic-new-regular(400);
+  @include font.submain-noto-sans-jp(400);
   border-radius: 5px;
 }
 
 .ground {
+  min-height: 83vh;
   background-color: palette.$basecolor;
   padding: 5%;
 }
@@ -68,8 +69,12 @@
   display: block;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .heading {
-  @include font.main_font_inconsolata(900,150);
+  @include font.main-font-inconsolata(900,150);
   color: palette.$accentcolor_green;
   font-size: 40px;
   text-align: center;
@@ -77,7 +82,7 @@
 
 .sub-model {
   & legend{
-  @include font.main_font_inconsolata(900,150);
+  @include font.main-font-inconsolata(900,150);
   color: palette.$accentcolor_green;
   font-size: 30px;
   text-align: center;
@@ -85,7 +90,7 @@
 
 .attention{
   font-size: large;
-  @include font.zen-kaku-gothic-new-regular(400);
+  @include font.submain-noto-sans-jp(400);
   text-align: center;
 }
 

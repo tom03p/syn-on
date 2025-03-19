@@ -1,0 +1,20 @@
+ja:
+  activerecord:
+    models:
+      user: ユーザー
+      profile: プロフィール
+      card: カード
+      music: 音楽
+    attributes:
+      user:
+        email: メールアドレス
+        password: パスワード
+        password_confirmation: パスワード確認
+        remember_me: サインイン状態を保持します
+      profile:
+        nickname: ニックネーム
+      card:
+        title: タイトル
+        message: 本文
+      music:
+        link: リンク

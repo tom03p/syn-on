@@ -34,6 +34,22 @@ gem "tzinfo-data", platforms: %i[ windows jruby ]
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
+# 環境変数を.envからENVにロード
+gem "dotenv", groups: [ :development, :test ]
+
+# User認証系
+gem "devise", "~> 4.9"
+
+# i18n
+gem "rails-i18n", "~> 7.0.0"
+
+# mail
+gem "mailjet"
+
+# mailにcss参照
+gem "premailer-rails"
+gem "nokogiri"
+
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
@@ -46,6 +62,11 @@ group :development, :test do
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
+
+  # Rspec
+  gem "faker"
+  gem "rspec-rails"
+  gem "factory_bot_rails"
 end
 
 group :development do
@@ -58,10 +79,7 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "selenium-webdriver"
+  gem "webdrivers"
 end
 
-group :production do
-  gem "mailjet"
-end
-
-gem "devise", "~> 4.9"
+group :production do end
