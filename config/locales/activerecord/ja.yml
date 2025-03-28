@@ -8,6 +8,7 @@ ja:
     attributes:
       user:
         email: メールアドレス
+        current_password: 現在のパスワード
         password: パスワード
         password_confirmation: パスワード確認
         remember_me: サインイン状態を保持します

@@ -1,9 +1,7 @@
-@use 'palette';
-@use 'parts';
-@use 'font';
+@use 'config';
 
 .header {
-  background-color: palette.$basecolor_lite;
+  background-color: config.$basecolor_lite;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -12,8 +10,8 @@
 }
 
 .main_title {
-  @include font.main-font-inconsolata(900,200);
-  color: palette.$accentcolor_green;
+  @include config.main-font-inconsolata(900,200);
+  color: config.$accentcolor_green;
   font-size: 50px;
 }
 
@@ -30,8 +28,8 @@
     height: auto;
     padding: 10px 15px;
     clear: both;
-    background: palette.$basecolor_lite;
-    border: 1px solid palette.$accentcolor_gray;
+    background: config.$basecolor_lite;
+    border: 1px solid config.$accentcolor_gray;
     border-radius: 5px;
     transform: scale(1, 0);
     transform-origin: top;
@@ -48,14 +46,14 @@
   .menu a {
     text-decoration: none;
     font-size: 20px;
-    color: palette.$basicfont;
+    color: config.$basicfont;
     display: block;
     padding: 10px 10px;
     transition: 0.2s;
   }
 
   .menu a:hover {
-    color: palette.$accentcolor_green;
+    color: config.$accentcolor_green;
     border-radius: 3px;
   }
 

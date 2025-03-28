@@ -1,19 +1,16 @@
-@use 'palette';
-@use 'parts';
-@use 'font';
-@use 'icon';
+@use 'config';
 
 .card {
   padding: 1em;
   width: 95%;
-  background-color: palette.$basecolor_lite;
-  box-shadow: 2px 3px 3px palette.$shadow;
+  background-color: config.$basecolor_lite;
+  box-shadow: 2px 3px 3px config.$shadow;
   display: flex;
 }
 
 .card-title {
   display: inline-block;
-  @include font.submain-noto-sans-jp(400)
+  @include config.submain-noto-sans-jp(400)
 }
 
 .nickname {
