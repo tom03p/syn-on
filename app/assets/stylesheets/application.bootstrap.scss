@@ -24,9 +24,14 @@ p{
   @include config.btn(5px,15px,30px);
   background-color: config.$accentcolor_gray;
   color: config.$accentcolor_white;
-  
   margin: 5px;
   border: none;
+  box-shadow: 3px 3px 0px config.$shadow;
+}
+
+.btn-gray:active {
+  box-shadow: inset 3px 3px 0px config.$shadow;
+  transition: 0.2s;
 }
 
 .btn-green {
@@ -35,4 +40,10 @@ p{
   color: config.$accentcolor_white;
   margin: 5px;
   border: none;
+  box-shadow: 3px 3px 0px config.$shadow;
+}
+
+.btn-green:active {
+  box-shadow: inset 3px 3px 0px config.$shadow;
+  transition: 0.2s;
 }

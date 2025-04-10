@@ -34,7 +34,7 @@
 
 /* 背景 */
 .ground {
-  min-height: 83vh;
+  min-height: 100vh;
   background-color: config.$basecolor;
   padding: 5%;
 }
@@ -97,8 +97,11 @@
 .heading {
   display: inline-block;
   @include config.main-font-inconsolata(900,150);
-  color: config.$accentcolor_green;
   font-size: 40px;
+  color: transparent;
+  background: config.$accentcolor_green_dark;
+  text-shadow: 3px 3px 0px config.$light-shadow;
+  background-clip: text;
 }
 
 .sub-heading {
@@ -111,9 +114,12 @@
 .sub-model {
   & legend{
   @include config.main-font-inconsolata(900,150);
-  color: config.$accentcolor_green;
   font-size: 30px;
   text-align: center;
+  color: transparent;
+  background: config.$accentcolor_green_dark;
+  text-shadow: 3px 3px 0px config.$light-shadow;
+  background-clip: text;
 }}
 
 .attention{
