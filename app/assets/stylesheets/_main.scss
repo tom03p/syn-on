@@ -1,15 +1,13 @@
-@use 'palette';
-@use 'parts';
-@use 'font';
+@use 'config';
 
 .notice {
   position: relative;
   z-index: 5;
   padding: 1%;
   margin: 0%;
-  color: palette.$accentcolor_white;
-  background-color: palette.$accentcolor_green;
-  @include font.submain-noto-sans-jp(400);
+  color: config.$accentcolor_white;
+  background-color: config.$accentcolor_green;
+  @include config.submain-noto-sans-jp(400);
   border-radius: 0px;
 }
 
@@ -18,9 +16,9 @@
   z-index: 5;
   padding: 1%;
   margin: 0%;
-  color: palette.$accentcolor_white;
-  background-color: palette.$accentcolor_red;
-  @include font.submain-noto-sans-jp(400);
+  color: config.$accentcolor_white;
+  background-color: config.$accentcolor_red;
+  @include config.submain-noto-sans-jp(400);
   border-radius: 0px;
 }
 
@@ -28,18 +26,20 @@
   min-width: 400px;
   padding: 3%;
   margin: 2%;
-  color: palette.$accentcolor_white;
-  background-color: palette.$accentcolor_red;
-  @include font.submain-noto-sans-jp(400);
+  color: config.$accentcolor_white;
+  background-color: config.$accentcolor_red;
+  @include config.submain-noto-sans-jp(400);
   border-radius: 5px;
 }
 
+/* 背景 */
 .ground {
-  min-height: 83vh;
-  background-color: palette.$basecolor;
+  min-height: 100vh;
+  background-color: config.$basecolor;
   padding: 5%;
 }
 
+/* 机 */
 .desk {
   position: relative;
   padding: 1em;
@@ -48,8 +48,8 @@
   display: grid;
   margin: 0 auto;
   .cloth {
-    background-color: palette.$basecolor_lite;
-    box-shadow: 2px 3px 3px palette.$shadow;
+    background-color: config.$basecolor_lite;
+    box-shadow: 2px 3px 3px config.$shadow;
   }
 }
 
@@ -60,8 +60,14 @@
   width: 95%;
   display: grid;
   margin: 0 auto;
-  background-color: palette.$basecolor_lite;
-  box-shadow: 2px 3px 3px palette.$shadow;
+  background-color: config.$basecolor_lite;
+  box-shadow: 2px 3px 3px config.$shadow;
+}
+
+/* 位置調整 */
+.slit {
+  width: 100%;
+  min-height: 1em;
 }
 
 .center {
@@ -69,34 +75,82 @@
   display: block;
 }
 
+.right {
+  margin-left: auto;
+  width: fit-content;
+}
+
+.left {
+  margin-right: auto;
+  width: fit-content;
+}
+
 .text-center {
   text-align: center;
 }
 
+.text-right {
+  text-align: right;
+}
+
+/* 見出し */
 .heading {
-  @include font.main-font-inconsolata(900,150);
-  color: palette.$accentcolor_green;
+  display: inline-block;
+  @include config.main-font-inconsolata(900,150);
   font-size: 40px;
-  text-align: center;
+  color: transparent;
+  background: config.$accentcolor_green_dark;
+  text-shadow: 3px 3px 0px config.$light-shadow;
+  background-clip: text;
+}
+
+.sub-heading {
+  display: inline-block;
+  color: config.$basicfont;
+  @include config.submain-noto-sans-jp(500);
+  font-size: 30px;
 }
 
 .sub-model {
   & legend{
-  @include font.main-font-inconsolata(900,150);
-  color: palette.$accentcolor_green;
+  @include config.main-font-inconsolata(900,150);
   font-size: 30px;
   text-align: center;
+  color: transparent;
+  background: config.$accentcolor_green_dark;
+  text-shadow: 3px 3px 0px config.$light-shadow;
+  background-clip: text;
 }}
 
 .attention{
   font-size: large;
-  @include font.submain-noto-sans-jp(400);
+  @include config.submain-noto-sans-jp(400);
   text-align: center;
 }
 
 .menu {
   display: inline-block;
   position: relative;
+}
+
+.link-list {
+  @include config.submain-noto-sans-jp(400);
+  color: config.$basicfont;
+  list-style: none;
+  transition: 0.2s;
+}
+
+.link-list a {
+  text-decoration: none;
+  font-size: 1.2em;
+  color: config.$basicfont;
+  @include config.submain-noto-sans-jp(400);
+  transition: 0.2s;
+}
+
+.link-list a:hover {
+  color: config.$accentcolor_green;
+  border-radius: 3px;
 }
 
 /* ケバブメニュー全体 */
@@ -108,9 +162,9 @@
 
 /* メニューボタン（☰） */
 .menu-btn {
-  background: palette.$basecolor_lite;
-  color: palette.$basicfont;
-  border: 1px solid palette.$basicfont;
+  background: config.$basecolor_lite;
+  color: config.$basicfont;
+  border: 1px solid config.$basicfont;
   padding: 5px 10px;
   font-size: 15px;
   cursor: pointer;
@@ -123,8 +177,8 @@
   position: absolute;
   top: 40px;
   left: 0;
-  background: palette.$basecolor_lite;
-  box-shadow: 0 4px 6px palette.$shadow;
+  background: config.$basecolor_lite;
+  box-shadow: 0 4px 6px config.$shadow;
   border-radius: 5px;
   min-width: 100px;
   overflow: hidden;
@@ -135,12 +189,12 @@
   display: block;
   padding: 10px;
   text-decoration: none;
-  color: palette.$basicfont;
+  color: config.$basicfont;
 }
 
 /* リンクにマウスが乗ったとき */
 .menu-content a:hover {
-  color: palette.$accentcolor_green;
+  color: config.$accentcolor_green;
 }
 
 /* JavaScriptで開閉する用のクラス */

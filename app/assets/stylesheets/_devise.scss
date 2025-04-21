@@ -1,17 +1,15 @@
-@use 'palette';
-@use 'parts';
-@use 'font';
+@use 'config';
 
 .field {
-  color: palette.$basicfont;
-  @include font.submain-noto-sans-jp(400);
+  color: config.$basicfont;
+  @include config.submain-noto-sans-jp(400);
   padding: 1%;
 }
 
 .text-field {
   border-radius: 5px;
   padding: 3%;
-  border: 1px solid palette.$basicfont;
+  border: 1px solid config.$basicfont;
   min-width: 300px;
 }
 

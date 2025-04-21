@@ -7,6 +7,7 @@
       <li><%= link_to t('header.profile'), profile_path %></li>
       <li><%= link_to t('header.card_index'), cards_path %></li>
       <li><%= link_to t('header.new_card'), new_card_path %></li>
+      <li><%= link_to t('header.setting'), static_pages_setting_path %></li>
       <li><%= link_to t('header.sign_out'), destroy_user_session_path, data: { turbo_method: :delete } %></li>
     </ul>
   </span>

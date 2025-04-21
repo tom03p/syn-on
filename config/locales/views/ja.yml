@@ -1,4 +1,15 @@
 ja:
+  defaults:
+    flash_message:
+      notice:
+        updated_successfully: "%{item}が変更されました。"
+        destroy_successfully: "%{item}が削除されました。"
+      alert:
+        item_is_empty: "%{item}が入力されていません。有効な%{item}を記入してください。"
+      question:
+        final_check: "本当に%{action}しますか？ この操作は取り消せません。"
+      greeting:
+        hope_to_see_you_again: また会えるのを楽しみにしています。
   helpers:
     submit:
       create: 登録
@@ -6,9 +17,11 @@ ja:
       update: 更新
       sign_in: サインイン
       send_email: 送信
+      cancel_account: アカウント削除
     edit: 編集
     delete: 削除
     label:
+      account: アカウント
       email: メールアドレス
       password: パスワード
   header:
@@ -18,6 +31,7 @@ ja:
     profile: プロフィール
     card_index: 全ての投稿
     new_card: 新規投稿
+    setting: 設定
   static_pages:
     start:
       title: Welcome!!
@@ -25,6 +39,24 @@ ja:
       timeline_introduction: タイムラインを覗いてみる
       sign_in: サインイン
       sign_up: 新規登録
+    setting:
+      title: Setting
+      setting_account: アカウント設定
+      reset_password: パスワードリセット
+      change_email: メールアドレスの変更
+      change_account_information: アカウント情報変更
+      delete_account: アカウントの削除
+  account:
+    exits:
+      show:
+        title: Cancel my account
+        question: サービスがお気に召しませんでしたか？
+        suggestion: もう少し遊んで行きませんか？
+        check: 本当に？
+    passwords:
+      edit:
+        title: Edit Password
+        characters_minimum: 文字以上
   cards:
     new:
       title: New Card

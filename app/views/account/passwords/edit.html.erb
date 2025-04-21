@@ -1,0 +1,36 @@
+<div class='ground'>
+  <div class='cloth-desk'>
+    <div class='center'>
+      <h2 class='heading'><%= t('.title') %></h2>
+    </div>
+    <div class='center'>
+      <%= render "devise/shared/error_messages", resource: current_user %>
+    </div>
+    <div class='center'>
+      <%= form_with(model: current_user, url: account_password_path, html: {method: :put}, local: true) do |f| %>
+      
+        <div class="field">
+          <%= f.label :current_password %><br />
+          <%= f.password_field :current_password, autocomplete: "current-password", class:"text-field" %>
+        </div>
+    
+        <div class="field">
+          <%= f.label :password %>
+          <% if @minimum_password_length %>
+            <span>(<%= @minimum_password_length %><%= t('.characters_minimum') %>)</span>
+          <% end %><br />
+          <%= f.password_field :password, autocomplete: "new-password", class:"text-field" %>
+        </div>
+
+        <div class="field">
+          <%= f.label :password_confirmation %><br />
+          <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"text-field" %>
+        </div>
+      
+        <div class="actions">
+          <%= f.submit t('helpers.submit.update'), class: "btn-green" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

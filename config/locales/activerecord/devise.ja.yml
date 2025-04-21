@@ -26,7 +26,12 @@ ja:
         message: "以下のリンクからサインインページに進んでください。"
         sign_in_link: "サインイン"
       reset_password_instructions:
-        subject: "パスワードのリセット手順"
+        subject: "パスワードリセット"
+        greeting: "こんにちは %{email} さん"
+        message: "パスワード変更のリクエストを受け付けました。以下のリンクから変更をお願いします。"
+        change_password: "パスワード変更"
+        wish: "このリクエストに心当たりがない場合は、このメールを無視してください。"
+        info: "上記のリンクから新しいパスワードを作成するまでパスワードは変更されません。"
       unlock_instructions:
         subject: "ロック解除手順"
       email_changed:
@@ -42,6 +47,14 @@ ja:
       send_paranoid_instructions: "メールアドレスが登録されている場合、数分以内にパスワードリセット用のリンクが届きます。"
       updated: "新しいパスワードでサインインしました。パスワードの変更も問題ありません。"
       updated_not_active: "パスワードは変更されました。"
+      new:
+        title: Reset Password
+        message: 下記メールアドレスにパスワード変更にに必要なリンクを送付致します。
+      edit:
+        title: Change your password
+        new_password: 新しいパスワード
+        characters_minimum: 文字以上
+        confirm_new_password: 新しいパスワードの確認
     registrations:
       destroyed: "Bye! あなたのアカウントは正常に削除されました。また会えることを楽しみにしています。"
       signed_up: "Welcome! あなたのアカウントは正常にサインアップされました。"
@@ -54,6 +67,8 @@ ja:
       new:
         title: Sign up
         characters_minimum: 文字以上
+      edit:
+        title: Edit Email
     sessions:
       signed_in: "サインインしました。"
       signed_out: "サインアウトしました。"
@@ -77,3 +92,4 @@ ja:
   links:
     messages:
       not_receive_confirmation?: 確認メールが来ない場合はこちら
+      forgot_your_password?: パスワードを忘れた方はこちら
