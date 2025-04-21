@@ -35,6 +35,7 @@ begin
 rescue ActiveRecord::PendingMigrationError => e
   abort e.to_s.strip
 end
+
 RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_paths = [
@@ -52,6 +53,7 @@ RSpec.configure do |config|
     Capybara.server_port = 4444
     Capybara.app_host = "http://#{Capybara.server_host}:#{Capybara.server_port}"
     Capybara.ignore_hidden_elements = false
+    ActiveJob::Base.queue_adapter = :test
   end
 
   config.include FactoryBot::Syntax::Methods
@@ -61,6 +63,7 @@ RSpec.configure do |config|
 
   include SigninMacros
   include NewCardMacros
+  include MailProcessingMacros
   # You can uncomment this line to turn off ActiveRecord support entirely.
   # config.use_active_record = false
 

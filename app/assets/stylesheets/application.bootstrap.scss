@@ -1,53 +1,49 @@
+@use 'config';
 
-@forward 'header';
-@forward 'footer';
-@forward 'main';
-@forward 'card';
-@forward 'devise';
-@forward 'side_menu';
-@forward 'mailer';
-
-@use 'palette';
-@use 'parts';
-@use 'font';
-@use 'icon';
-
+@use 'header';
+@use 'footer';
+@use 'main';
+@use 'card';
+@use 'devise';
+@use 'side_menu';
+@use 'mailer';
 
 a{
   text-decoration: none;
-  color: palette.$basicfont;
-  @include font.submain-noto-sans-jp(400);
+  color: config.$basicfont;
+  @include config.submain-noto-sans-jp(400);
   transition: 0.2s;
 }
 
 p{
-  color: palette.$basicfont;
-  @include font.submain-noto-sans-jp(400)
-}
-
-.link-bar {
-  color: palette.$basicfont;
-  @include font.submain-noto-sans-jp(400);
-  transition: 0.2s;
-}
-
-.link-bar:hover {
-  color: palette.$accentcolor_green;
+  color: config.$basicfont;
+  @include config.submain-noto-sans-jp(400)
 }
 
 .btn-gray {
-  @include parts.btn(5px,15px,30px);
-  background-color: palette.$accentcolor_gray;
-  color: palette.$accentcolor_white;
-  
+  @include config.btn(5px,15px,30px);
+  background-color: config.$accentcolor_gray;
+  color: config.$accentcolor_white;
   margin: 5px;
   border: none;
+  box-shadow: 3px 3px 0px config.$shadow;
+}
+
+.btn-gray:active {
+  box-shadow: inset 3px 3px 0px config.$shadow;
+  transition: 0.2s;
 }
 
 .btn-green {
-  @include parts.btn(5px,15px,30px);
-  background-color: palette.$accentcolor_green;
-  color: palette.$accentcolor_white;
+  @include config.btn(5px,15px,30px);
+  background-color: config.$accentcolor_green;
+  color: config.$accentcolor_white;
   margin: 5px;
   border: none;
+  box-shadow: 3px 3px 0px config.$shadow;
+}
+
+.btn-green:active {
+  box-shadow: inset 3px 3px 0px config.$shadow;
+  transition: 0.2s;
 }

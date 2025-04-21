@@ -1,6 +1,4 @@
-@use 'palette';
-@use 'parts';
-@use 'font';
+@use 'config';
 
 .footer {
   position: sticky;
@@ -8,12 +6,12 @@
   padding: 0.5%;
   margin: 0%;
   width: 100%;
-  background-color: palette.$basecolor_dark;
+  background-color: config.$basecolor_dark;
 }
 
 .footer_title {
   text-align: center;
-  @include font.main-font-inconsolata(200,200);
-  color: palette.$accentcolor_white;
+  @include config.main-font-inconsolata(200,200);
+  color: config.$accentcolor_white;
   font-size: 15px;
 }

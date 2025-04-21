@@ -14,7 +14,7 @@ class ProfilesController < ApplicationController
     if @profile.update(profile_params)
       redirect_to profile_path, notice: "保存されました"
     else
-      flash.now[:danger] = "保存できませんでした"
+      flash.now[:alert] = "保存できませんでした"
       render :edit, status: :unprocessable_entity
     end
   end

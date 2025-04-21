@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe "UserSessions", type: :system do
-  let(:user) { create(:user) }
+  let(:user) { create(:user, confirmed_at: Time.current) }
 
   describe "サインイン前" do
     context "フォームの入力値が登録可の状態" do
@@ -15,7 +15,7 @@ RSpec.describe "UserSessions", type: :system do
       end
     end
     context "フォームの入力値が登録不可の状態" do
-      it "フォームが未入力でサインアウト処理が失敗する" do
+      it "フォームが未入力でサインイン処理が失敗する" do
         visit user_session_path
         click_button 'サインイン'
         expect(page).to have_content 'メールアドレス 又はパスワードが無効です。'

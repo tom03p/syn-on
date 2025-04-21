@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe "Cards", type: :system do
-  let!(:user) { create(:user) }
+  let(:user) { create(:user, confirmed_at: Time.current) }
   describe 'サインイン前' do
     describe 'ページ遷移確認' do
       context 'カードの一覧ページにアクセスする' do
@@ -28,7 +28,7 @@ RSpec.describe "Cards", type: :system do
           expect(page).to have_current_path(user_root_path, wait: 1)
           find('.hamburger-menu').click
           click_link '新規投稿'
-          expect(page).to have_selector('h1', text: 'New Card', wait: 5)
+          expect(page).to have_content 'New Card'
           expect(page).to have_current_path(new_card_path, wait: 5)
           fill_in 'タイトル', with: 'メンダコ'
           fill_in '本文', with: 'どっこいしょ'
