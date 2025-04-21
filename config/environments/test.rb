@@ -43,6 +43,7 @@ Rails.application.configure do
   # ActionMailer::Base.deliveries array.
   config.action_mailer.delivery_method = :test
 
+  config.action_mailer.perform_deliveries = true
   # Unlike controllers, the mailer instance doesn't have any context about the
   # incoming request so you'll need to provide the :host parameter yourself.
   config.action_mailer.default_url_options = { host: "localhost:3000" }

@@ -6,9 +6,12 @@ class Account::PasswordsController < ApplicationController
   end
 
   def update
-    if current_user.update_with_password(password_params)
+    if params[:user][:password].blank?
+      flash.now[:alert] = t("defaults.flash_message.alert.item_is_empty", item: User.human_attribute_name(:password))
+      render :edit, status: :unprocessable_entity
+    elsif current_user.update_with_password(password_params)
       bypass_sign_in current_user
-      redirect_to user_root_path, notice: t('defaults.flash_message.updated_successfully', item: User.human_attribute_name(:password))
+      redirect_to user_root_path, notice: t("defaults.flash_message.notice.updated_successfully", item: User.human_attribute_name(:password))
     else
       render :edit, status: :unprocessable_entity
     end

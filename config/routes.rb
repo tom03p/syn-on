@@ -6,8 +6,8 @@ Rails.application.routes.draw do
     root to: "static_pages#start"
   end
   devise_for :users, controllers: {
-    confirmations: 'users/confirmations',
-    passwords: 'users/passwords',
+    confirmations: "users/confirmations",
+    passwords: "users/passwords",
     registrations: "users/registrations"
   }
   namespace :account do

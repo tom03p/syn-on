@@ -18,7 +18,7 @@
       <p><%= t('.check') %></p>
     </div>
     <div class="center">
-      <%= link_to t('helpers.submit.cancel_account'),  account_exit_path, method: :delete, data: {turbo_method: :delete, turbo_confirm: t('defaults.flash_message.final_check', action: t('helpers.delete')) }, class: "btn-gray" %></div>
+      <%= link_to t('helpers.submit.cancel_account'),  account_exit_path, method: :delete, data: {turbo_method: :delete, turbo_confirm: t('defaults.flash_message.question.final_check', action: t('helpers.delete')) }, class: "btn-gray" %></div>
     </div>
   </div>
 </div>

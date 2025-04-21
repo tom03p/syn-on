@@ -14,7 +14,7 @@ class Users::ConfirmationsController < Devise::ConfirmationsController
       resource.send_confirmation_instructions
     end
 
-    flash[:notice] = t('devise.confirmations.send_instructions')
+    flash[:notice] = t("devise.confirmations.send_instructions")
     redirect_to new_session_path(resource_name)
   end
 

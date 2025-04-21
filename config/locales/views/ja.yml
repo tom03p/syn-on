@@ -1,10 +1,15 @@
 ja:
   defaults:
     flash_message:
-      final_check: "本当に%{action}しますか？ この操作は取り消せません。"
-      updated_successfully: "%{item}が変更されました。"
-      destroy_successfully: "%{item}が削除されました。"
-      hope_to_see_you_again: また会えるのを楽しみにしています。
+      notice:
+        updated_successfully: "%{item}が変更されました。"
+        destroy_successfully: "%{item}が削除されました。"
+      alert:
+        item_is_empty: "%{item}が入力されていません。有効な%{item}を記入してください。"
+      question:
+        final_check: "本当に%{action}しますか？ この操作は取り消せません。"
+      greeting:
+        hope_to_see_you_again: また会えるのを楽しみにしています。
   helpers:
     submit:
       create: 登録

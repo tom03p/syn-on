@@ -14,7 +14,7 @@ class Users::PasswordsController < Devise::PasswordsController
       resource.send_reset_password_instructions
     end
 
-    flash[:notice] = t('devise.passwords.send_instructions')
+    flash[:notice] = t("devise.passwords.send_instructions")
     redirect_to new_session_path(resource_name)
   end
 
